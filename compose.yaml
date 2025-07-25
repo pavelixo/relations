@@ -3,13 +3,13 @@ services:
     image: 'mongo:latest'
     environment:
       - 'MONGO_INITDB_DATABASE=relations'
-      - 'MONGO_INITDB_ROOT_PASSWORD=mongo'
-      - 'MONGO_INITDB_ROOT_USERNAME=mongo'
+      - 'MONGO_INITDB_ROOT_PASSWORD=spring'
+      - 'MONGO_INITDB_ROOT_USERNAME=spring'
     ports:
       - '27017'
   neo4j:
     image: 'neo4j:latest'
     environment:
-      - 'NEO4J_AUTH=neo4j/neo4j'
+      - 'NEO4J_AUTH=neo4j/neo4jspring'
     ports:
       - '7687'

@@ -22,7 +22,7 @@ public class UserGraph {
 	private String id;
 	
 	@Builder.Default
-	@Relationship(type = "FRIENDS")
+	@Relationship(type = "FRIENDS", direction = Relationship.Direction.OUTGOING)
 	private Set<UserGraph> friends = new HashSet<>();
 	
     public void addFriend(UserGraph friend) {
